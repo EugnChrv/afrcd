@@ -1,0 +1,350 @@
+body{
+    background: #fff;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+.header{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+
+        &__img{
+            background: url("/images/logo_africadoo.png") no-repeat center/contain;
+            width: 100%;
+            max-width: 140px;
+            height: 27px;
+            padding: 19px 0 19px 0;
+        }
+
+
+        &__button {
+            max-width: 118px;
+            // max-height: 35px;
+            border: 2px solid #AA66D1;
+            border-radius: 40px;
+            // box-sizing: content-box;
+            outline: none;
+            color: #AA66D1;
+            padding: 10px 35px 10px 35px;
+            text-align: center;
+            font-size: 14px;
+            font-family: 'Roboto', sans-serif;
+            margin: 15px 0 15px 0;
+            background: #fff;
+            font-weight: 500;
+            font-family: Roboto , sans-serif;
+        }
+}
+
+
+.africadoo__content {
+    background: #FBF7FD;
+    max-width: 1790px;
+    height: 366px;
+    display: flex;
+    justify-content: center;
+    margin: 65px;
+    border-radius: 20px;
+
+        &-text{
+            max-width: 355px;
+            margin-top: 65px;
+        }
+
+        &-text__logo{
+            max-width: 162px;
+            max-height: 26px;
+            border-radius: 20px;
+            background: #E8F1F4;
+            color: #1CA98E;
+            text-align: center;
+            font-size: 11px;
+            font-weight: bold;
+            padding: 2px 13px ;
+            margin-bottom: 12px;
+        }
+
+
+        &-text__title{
+            color: #333333;
+            font-weight: 500;
+            font-size: 35px;
+            line-height: 1.3;
+            margin-bottom: 5px;
+        }
+
+        &-text__dsc{
+            line-height: 1.5;
+            margin-bottom: 30px;
+        }
+
+
+        &-button{
+            width: 290px;
+            height: 50px;
+            padding: 15px 125px;
+            border: none;
+            border-radius: 60px;
+            box-sizing: border-box;
+            outline: none;
+            background: linear-gradient(270deg, #634DBD 0%, #A566C3 100%);
+            color: #fff;
+            line-height: 1.2;
+            font-weight: 500;
+            font-family: Roboto , sans-serif;
+
+        }
+
+        &-img {
+            background: url("/images/hero\ image.png") no-repeat center/contain;
+            width: 100%;
+            max-width: 549px;
+            height: 366px;
+        }
+}
+
+
+
+.africadoo__information {
+
+        &-title{
+            font-size: 25px;
+            line-height: 1.4;
+            font-weight: 500;
+            text-align: center;
+        }
+        
+        &-title__content {
+            line-height: 1.5;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        &__content {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 65px;
+
+        }
+
+        &__wrapper{
+            max-width: 355px;
+            // margin: 6px 0 0 30px;
+        }
+
+
+        &-verified {
+            font-size: 20px;
+            line-height: 1.4;
+            font-weight: 500;
+        }
+
+        &-txt {
+            line-height: 1.5;
+            margin-bottom: 30px;
+        }
+
+
+        &-button {
+            width: 290px;
+            height: 50px;
+            padding: 15px 76px;
+            border: none;
+            border-radius: 60px;
+            box-sizing: border-box;
+            outline: none;
+            background: linear-gradient(270deg, #634DBD 0%, #A566C3 100%);
+            color: #fff;
+            line-height: 1.2;
+            font-weight: 500;
+            text-align: center;
+            font-family: Roboto , sans-serif;
+        }
+
+        &-image {
+            width: 355px;
+            height: 200px;
+            border-radius: 20px;
+            margin-left: 30px;
+            background: {
+                repeat: no-repeat;
+                position: center;
+                size: contain;
+                color: #F6FCFD;
+            };
+
+            &--first {
+                background-image: url("/images/1_illustration.svg");
+            }
+
+            &--second {
+                background-image: url("/images/2_illustration.svg");
+            }
+
+            &--third {
+                background-image: url("/images/3_illustration.svg");
+            }
+        }
+}
+
+
+.africadoo__join {
+    max-width: 1790px;
+    background: #FAF7FC;
+    margin: 0 65px 0 65px;
+    padding: 65px 0;
+    border-radius: 20px;
+    text-align: center;
+
+
+    &-title {
+        font-weight: 500;
+        font-size: 25px;
+        line-height: 1.4;
+    }
+
+    &-content {
+        font-size: 16px;
+        line-height: 1.5;
+        color: #333333;
+        opacity: 0.4;
+        margin-bottom: 30px;
+    }
+    
+
+
+    &-inputs {
+        max-width: 370px;
+        display: flex;
+        flex-direction: column;
+        max-width: 290px;
+        background-color: #fff;
+        margin: 0 auto;
+        border-radius: 20px;
+        padding: 0 40px;
+    }
+
+    &-input {
+        padding: 12px 15px;
+        border-radius: 5px;
+        border: 1px solid #E9E9E9;
+        margin-bottom: 15px;
+        outline: none;
+        box-sizing: border-box;
+        
+    }
+
+    &-inputs__text {
+        font-size: 25px;
+        font-weight: 500;
+        line-height: 1.4;
+        margin: 25px 0 50px 0;
+        
+    }
+
+    &-radio {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &-radio-male::after {
+        content: "Male";
+        color: #777777;
+        font-size: 14px;
+        letter-spacing: 1px;
+        line-height: 1.1;
+        font-family: Roboto, sans-serif;
+
+    }
+
+    &-radio-female::after {
+        content: "Female";
+        color: #777777;
+        font-size: 14px;
+        letter-spacing: 1px;
+        line-height: 1.1;
+        font-family: Roboto, sans-serif;
+
+    }
+}
+
+
+
+.africadoo__footer {
+    width: 100%;
+    max-width: 1170px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+
+
+
+
+    &-documents {
+        color: #777777;
+        margin: 42px 0 60px 0;
+        line-height: 1.4;
+    }
+
+    &-content {
+        font-weight: 500;
+        margin-bottom: 15px;
+
+    }
+
+
+    &-content-text {
+        font-size: 14px;
+        line-height: 1.6;
+        margin-bottom: 10px;
+    }
+
+    &-content-payments {
+        display: flex;
+        justify-content: start;
+
+
+
+    }
+
+    &-content-payments-image {
+        min-width: 87px;
+        min-height: 25px;
+        background: {
+            repeat:no-repeat;
+            position: center;
+            size: contain;
+        }
+    }
+
+
+    &-content-payments--visa {
+        background-image: url("/images/visa.png");
+    }
+
+    &-content-payments--verified {
+        background-image: url("/images/verified\ by\ visa.png");
+    }
+
+    &-content-payments--secure {
+        background-image: url("/images/mc\ secure\ code.png");
+    }
+
+    &-content-payments--master {
+        background-image: url("/images/master\ card.png");
+    }
+}
+
+
+.copyright {
+    max-width: 1025px;
+    margin: 0 auto;
+    color: #777777;
+    font-size: 12px;
+    border-top: .5px solid #DCDCDC;
+    padding: 20px 0 60px 0;
+    
+
+}
