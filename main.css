@@ -13,12 +13,36 @@ body {
       justify-content: space-around;
 }
 
+@media only screen and (max-width: 767px) {
+  .header {
+    max-width: 767px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .header {
+    max-width: 400px;
+  }
+}
+
 .header__img {
   background: url("/images/logo_africadoo.png") no-repeat center/contain;
   width: 100%;
   max-width: 140px;
   height: 27px;
   padding: 19px 0 19px 0;
+}
+
+@media only screen and (max-width: 767px) {
+  .header__img {
+    margin-left: 15px;
+  }
 }
 
 .header__button {
@@ -37,6 +61,12 @@ body {
   font-family: Roboto , sans-serif;
 }
 
+@media only screen and (max-width: 767px) {
+  .header__button {
+    margin-right: 15px;
+  }
+}
+
 .africadoo__content {
   background: #FBF7FD;
   max-width: 1790px;
@@ -51,9 +81,38 @@ body {
   border-radius: 20px;
 }
 
+@media only screen and (max-width: 767px) {
+  .africadoo__content {
+    max-width: 767px;
+    height: 767px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    margin: 0;
+  }
+}
+
 .africadoo__content-text {
   max-width: 355px;
   margin-top: 65px;
+}
+
+@media only screen and (max-width: 767px) {
+  .africadoo__content-text {
+    max-width: 738px;
+    padding: 0 15px;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .africadoo__content-text {
+    max-width: 400px;
+    margin: 0;
+  }
 }
 
 .africadoo__content-text__logo {
@@ -77,26 +136,38 @@ body {
   margin-bottom: 5px;
 }
 
+@media only screen and (max-width: 400px) {
+  .africadoo__content-text__title {
+    font-size: 30px;
+    line-height: 1.3;
+  }
+}
+
 .africadoo__content-text__dsc {
   line-height: 1.5;
   margin-bottom: 30px;
 }
 
-.africadoo__content-button {
-  width: 290px;
+.africadoo__content-button--hover {
+  width: 100%;
+  max-width: 290px;
   height: 50px;
-  padding: 15px 125px;
+  padding: 15px 76px;
   border: none;
   border-radius: 60px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
   outline: none;
   background: -webkit-gradient(linear, right top, left top, from(#634DBD), to(#A566C3));
   background: linear-gradient(270deg, #634DBD 0%, #A566C3 100%);
   color: #fff;
   line-height: 1.2;
   font-weight: 500;
+  text-align: center;
   font-family: Roboto , sans-serif;
+}
+
+.africadoo__content-button--hover:hover {
+  background: -webkit-gradient(linear, right top, left top, to(#A566C3));
+  background: linear-gradient(270deg, #A566C3 100%);
 }
 
 .africadoo__content-img {
@@ -104,6 +175,20 @@ body {
   width: 100%;
   max-width: 549px;
   height: 366px;
+}
+
+@media only screen and (max-width: 767px) {
+  .africadoo__content-img {
+    max-width: 738px;
+    max-height: 532px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .africadoo__information {
+    margin-top: 45px;
+    padding: 0 15px;
+  }
 }
 
 .africadoo__information-title {
@@ -120,17 +205,45 @@ body {
 }
 
 .africadoo__information__content {
+  max-width: 740px;
+  width: 100%;
+  margin: 0 auto 65px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  margin-bottom: 65px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
-.africadoo__information__wrapper {
-  max-width: 355px;
+@media only screen and (max-width: 767px) {
+  .africadoo__information__content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+.africadoo__information__wrapper, .africadoo__information-image {
+  width: calc(50% - 15px);
+}
+
+@media only screen and (max-width: 767px) {
+  .africadoo__information__wrapper, .africadoo__information-image {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .africadoo__information__wrapper {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
 }
 
 .africadoo__information-verified {
@@ -144,33 +257,19 @@ body {
   margin-bottom: 30px;
 }
 
-.africadoo__information-button {
-  width: 290px;
-  height: 50px;
-  padding: 15px 76px;
-  border: none;
-  border-radius: 60px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  outline: none;
-  background: -webkit-gradient(linear, right top, left top, from(#634DBD), to(#A566C3));
-  background: linear-gradient(270deg, #634DBD 0%, #A566C3 100%);
-  color: #fff;
-  line-height: 1.2;
-  font-weight: 500;
-  text-align: center;
-  font-family: Roboto , sans-serif;
-}
-
 .africadoo__information-image {
-  width: 355px;
   height: 200px;
   border-radius: 20px;
-  margin-left: 30px;
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
   background-color: #F6FCFD;
+}
+
+@media only screen and (max-width: 767px) {
+  .africadoo__information-image {
+    height: 200px;
+  }
 }
 
 .africadoo__information-image--first {
@@ -194,6 +293,14 @@ body {
   text-align: center;
 }
 
+@media only screen and (max-width: 767px) {
+  .africadoo__join {
+    max-width: 767px;
+    margin: 0;
+    padding: 45px 0;
+  }
+}
+
 .africadoo__join-title {
   font-weight: 500;
   font-size: 25px;
@@ -203,9 +310,15 @@ body {
 .africadoo__join-content {
   font-size: 16px;
   line-height: 1.5;
-  color: #333333;
   opacity: 0.4;
   margin-bottom: 30px;
+}
+
+@media only screen and (max-width: 767px) {
+  .africadoo__join-content {
+    opacity: 1;
+    color: #333333;
+  }
 }
 
 .africadoo__join-inputs {
@@ -290,6 +403,19 @@ body {
   margin-bottom: 15px;
 }
 
+@media only screen and (max-width: 400px) {
+  .africadoo__footer-content-mob {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .africadoo__footer-content-mobile {
+    position: absolute;
+    margin-top: 200px;
+  }
+}
+
 .africadoo__footer-content-text {
   font-size: 14px;
   line-height: 1.6;
@@ -306,11 +432,19 @@ body {
 }
 
 .africadoo__footer-content-payments-image {
-  min-width: 87px;
-  min-height: 25px;
+  width: 100%;
+  max-width: 87px;
+  height: 25px;
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
+}
+
+@media only screen and (max-width: 400px) {
+  .africadoo__footer-content-payments-image {
+    width: 100%;
+    min-width: 80px;
+  }
 }
 
 .africadoo__footer-content-payments--visa {
@@ -336,5 +470,13 @@ body {
   font-size: 12px;
   border-top: .5px solid #DCDCDC;
   padding: 20px 0 60px 0;
+}
+
+@media only screen and (max-width: 400px) {
+  .copyright {
+    text-align: center;
+    margin-top: 20px;
+    padding: 20px 0 10px 0;
+  }
 }
 /*# sourceMappingURL=main.css.map */

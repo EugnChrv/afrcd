@@ -1,30 +1,44 @@
-body{
+body {
     background: #fff;
     margin: 0;
     font-family: 'Roboto', sans-serif;
 }
 
 
-.header{
+.header {
     width: 100%;
     display: flex;
     justify-content: space-around;
 
-        &__img{
+    @media only screen and (max-width: 767px) {
+        max-width: 767px;
+        display: flex;
+        justify-content: space-between;
+        // padding: 15px;
+    }
+
+    @media only screen and (max-width: 400px) {
+       max-width: 400px;
+    }
+
+        &__img {
             background: url("/images/logo_africadoo.png") no-repeat center/contain;
             width: 100%;
             max-width: 140px;
             height: 27px;
             padding: 19px 0 19px 0;
+
+            @media only screen and (max-width: 767px) {
+                margin-left: 15px;
+            }
         }
+        
 
 
         &__button {
             max-width: 118px;
-            // max-height: 35px;
             border: 2px solid #AA66D1;
             border-radius: 40px;
-            // box-sizing: content-box;
             outline: none;
             color: #AA66D1;
             padding: 10px 35px 10px 35px;
@@ -35,6 +49,10 @@ body{
             background: #fff;
             font-weight: 500;
             font-family: Roboto , sans-serif;
+
+            @media only screen and (max-width: 767px) {
+                margin-right: 15px;
+            }
         }
 }
 
@@ -48,12 +66,34 @@ body{
     margin: 65px;
     border-radius: 20px;
 
+    @media only screen and (max-width: 767px) {
+        max-width: 767px;
+        height: 767px;
+        display: flex;
+        flex-direction: column-reverse;
+        margin: 0;
+
+    }
+
+
         &-text{
             max-width: 355px;
             margin-top: 65px;
+
+            @media only screen and (max-width: 767px) {
+                max-width: 738px;
+                padding: 0 15px;
+                
+        
+            }
+
+            @media only screen and (max-width: 400px) {
+                max-width: 400px;
+                margin: 0;
+             }
         }
 
-        &-text__logo{
+        &-text__logo {
             max-width: 162px;
             max-height: 26px;
             border-radius: 20px;
@@ -64,37 +104,50 @@ body{
             font-weight: bold;
             padding: 2px 13px ;
             margin-bottom: 12px;
+            
         }
 
 
-        &-text__title{
+        &-text__title {
             color: #333333;
             font-weight: 500;
             font-size: 35px;
             line-height: 1.3;
             margin-bottom: 5px;
+
+
+            @media only screen and (max-width: 400px) {
+                font-size: 30px;
+                line-height: 1.3;
+             }
         }
 
-        &-text__dsc{
+        &-text__dsc {
             line-height: 1.5;
             margin-bottom: 30px;
         }
 
 
-        &-button{
-            width: 290px;
+        &-button--hover {
+            width: 100%;
+            max-width: 290px;
             height: 50px;
-            padding: 15px 125px;
+            padding: 15px 76px;
             border: none;
             border-radius: 60px;
-            box-sizing: border-box;
             outline: none;
             background: linear-gradient(270deg, #634DBD 0%, #A566C3 100%);
             color: #fff;
             line-height: 1.2;
             font-weight: 500;
+            text-align: center;
             font-family: Roboto , sans-serif;
 
+        }
+
+        &-button--hover:hover {
+            background: linear-gradient(270deg, #A566C3 100%); ;
+            
         }
 
         &-img {
@@ -102,6 +155,12 @@ body{
             width: 100%;
             max-width: 549px;
             height: 366px;
+
+            @media only screen and (max-width: 767px) {
+                max-width: 738px;
+                max-height: 532px;
+        
+            }
         }
 }
 
@@ -109,7 +168,13 @@ body{
 
 .africadoo__information {
 
-        &-title{
+
+    @media only screen and (max-width: 767px) {
+        margin-top: 45px;
+        padding: 0 15px;
+    }
+
+        &-title {
             font-size: 25px;
             line-height: 1.4;
             font-weight: 500;
@@ -123,15 +188,33 @@ body{
         }
 
         &__content {
+            max-width: 740px;
+            width: 100%;
+            margin: 0 auto 65px;
             display: flex;
-            justify-content: center;
-            margin-bottom: 65px;
+            justify-content: space-between;
+
+            @media only screen and (max-width: 767px) {
+                display: flex;
+                flex-direction: column;
+        
+            }
 
         }
 
-        &__wrapper{
-            max-width: 355px;
-            // margin: 6px 0 0 30px;
+        &__wrapper,
+        &-image {
+            width: calc(50% - 15px);
+
+            @media only screen and (max-width: 767px) {
+                width: 100%;
+            }
+        }
+
+        &__wrapper {
+            @media only screen and (max-width: 767px) {
+                order: 1;
+            }
         }
 
 
@@ -146,34 +229,20 @@ body{
             margin-bottom: 30px;
         }
 
-
-        &-button {
-            width: 290px;
-            height: 50px;
-            padding: 15px 76px;
-            border: none;
-            border-radius: 60px;
-            box-sizing: border-box;
-            outline: none;
-            background: linear-gradient(270deg, #634DBD 0%, #A566C3 100%);
-            color: #fff;
-            line-height: 1.2;
-            font-weight: 500;
-            text-align: center;
-            font-family: Roboto , sans-serif;
-        }
-
         &-image {
-            width: 355px;
             height: 200px;
             border-radius: 20px;
-            margin-left: 30px;
             background: {
                 repeat: no-repeat;
                 position: center;
                 size: contain;
                 color: #F6FCFD;
-            };
+            }
+
+
+            @media only screen and (max-width: 767px) {
+                height: 200px;
+            }
 
             &--first {
                 background-image: url("/images/1_illustration.svg");
@@ -198,6 +267,12 @@ body{
     border-radius: 20px;
     text-align: center;
 
+    @media only screen and (max-width: 767px) {
+        max-width: 767px;
+        margin: 0;
+        padding: 45px 0;
+    }
+
 
     &-title {
         font-weight: 500;
@@ -208,9 +283,13 @@ body{
     &-content {
         font-size: 16px;
         line-height: 1.5;
-        color: #333333;
         opacity: 0.4;
         margin-bottom: 30px;
+
+        @media only screen and (max-width: 767px) {
+            opacity: 1;
+            color: #333333;
+        }
     }
     
 
@@ -295,6 +374,24 @@ body{
     }
 
 
+    &-content-mob {
+
+        @media only screen and (max-width: 400px) {
+            display: none;
+        }  
+    }
+
+
+    &-content-mobile {
+
+        @media only screen and (max-width: 400px) {
+            position: absolute;
+            margin-top: 200px;
+        } 
+    }
+  
+  
+
     &-content-text {
         font-size: 14px;
         line-height: 1.6;
@@ -305,18 +402,23 @@ body{
         display: flex;
         justify-content: start;
 
-
-
     }
 
     &-content-payments-image {
-        min-width: 87px;
-        min-height: 25px;
+        width: 100%;
+        max-width: 87px;
+        height: 25px;
         background: {
             repeat:no-repeat;
             position: center;
             size: contain;
         }
+
+
+        @media only screen and (max-width: 400px) {
+            width: 100%;
+            min-width: 80px;
+        } 
     }
 
 
@@ -335,6 +437,7 @@ body{
     &-content-payments--master {
         background-image: url("/images/master\ card.png");
     }
+ 
 }
 
 
@@ -345,6 +448,14 @@ body{
     font-size: 12px;
     border-top: .5px solid #DCDCDC;
     padding: 20px 0 60px 0;
+
+
+    @media only screen and (max-width: 400px) {
+        // max-width: 400px;
+        text-align: center;
+        margin-top: 20px;
+        padding: 20px 0 10px 0;
+    }    
     
 
 }
